@@ -1,0 +1,24 @@
+Por favor, faça um script Python que:
+
+1) Consiga ler amostras I&Q de arquivos comprimidos no formato .parquet;
+
+2) Essas amostras podem ser identificadas como sendo provenientes de canais livres (H0) e ocupados (H1);
+
+3) O detector utilizado será o baseado em norma (norm-based detector), definido por T(p) = (1/N) * sum{n=1}{N}|x(i)|^p;
+
+4) N é a quantidade de amostras naquela janela de sensoriamento;
+
+5) Existe uma quantidade total de amostras de um determinado canal. Nós iremos dividir essa quantidade totla em segmentos de N elementos para podermos aplicar a regra do sensoriamento;
+
+6) p = 0.01, p = 0.05, p = 0.1, p = 0.25, p = 0.5, p = 1, p = 2;
+
+7) Repete-se o processo para todos os valores de p, vale destacar;
+
+8) Ordena-se os valores das estatísticas de teste T calculadas para cada p, ordena-os de forma crescente e define-se Pfa = 0.1. Então, selecionamos o valor que está posicionado no índice associado à esta probabilidade. Algo assim: no vetor ordenado de forma crescente, pegar o valor que esteja no índice (1-Pfa) * K, sendo K a quantidade de estatísticas de teste alcançadas por valor de p. Veja que K seria a quantidade de resultados obtidos pelo agrupamento de N elementos;
+
+9) Cômputo da probabilidade de detecção (Pd) pegando as amostras de um canal ocupado, sob determinado ganho da USRP, e computar a Pd assim: qual a probabilidade do valor da estatística de teste ser maior que o threshold? Basta comparar cada estatística de teste com o threshold, somar tudo quando for verdade, e dividir pelo total de estatísticas de teste. ATENÇÃO: FAZER ISSO PARA CADA VALOR DE p.
+
+10) Permita que o script eu tenha um campo em que eu coloque os paths dos arquivos para que eu possa dar o play e você possa acessá-los;
+
+11) Crie funções independentes para fazer as tarefas. Gere arquivos csv com os thresholds para cada p, outro com as estatísticas de teste de cada p e outro com as Pd's de cada p. Lembrando que a Pd será calculada em relação ao threshold pré-definido para aquele p.
+

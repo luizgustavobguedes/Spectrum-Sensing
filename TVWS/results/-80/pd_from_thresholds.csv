@@ -1,0 +1,8 @@
+p,pd,threshold_source,test_stats_source
+0.01,0.978,/home/inatel-crr/Documents/Atividades/2026/TVWS/results/thresholds.csv,computed_from_h1_parquet
+0.05,0.9776666666666667,/home/inatel-crr/Documents/Atividades/2026/TVWS/results/thresholds.csv,computed_from_h1_parquet
+0.1,0.9776666666666667,/home/inatel-crr/Documents/Atividades/2026/TVWS/results/thresholds.csv,computed_from_h1_parquet
+0.25,0.9773333333333334,/home/inatel-crr/Documents/Atividades/2026/TVWS/results/thresholds.csv,computed_from_h1_parquet
+0.5,0.9773333333333334,/home/inatel-crr/Documents/Atividades/2026/TVWS/results/thresholds.csv,computed_from_h1_parquet
+1.0,0.975,/home/inatel-crr/Documents/Atividades/2026/TVWS/results/thresholds.csv,computed_from_h1_parquet
+2.0,0.8426666666666667,/home/inatel-crr/Documents/Atividades/2026/TVWS/results/thresholds.csv,computed_from_h1_parquet
